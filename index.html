@@ -5,50 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="javascript.js" defer></script>
 </head>
 <body>
-    <script>
-        function getComputerChoice() {
-            let randomNum = Math.ceil(Math.random() * 3);
-            switch(randomNum) {
-                case(1): return "ROCK"
-                break;
-                case(2): return "PAPER"
-                break;
-                case(3): return "SCISSORS"
-                break;
-            }
-        }
+    <div class="running-score">
+        <span class="player-score"></span>
+        <span class="computer-score"></span>
+    </div>
+    <div class="container">
+    <button class="rock">Rock</button>
+    <button class="paper">Paper</button>
+    <button class="scissors">Scissors</button>
+   </div>
+   <div class="outcome">
 
-        const playerSelection = prompt("Rock, Paper, or Scissors?");
-        const computerSelection = getComputerChoice();
-
-        function playRound(playerSelection, computerSelection) {
-            if (playerSelection.toUpperCase() == "ROCK" && computerSelection == "SCISSORS") {
-                return "You win! Rock beats Scissors!";
-            } else
-            if (playerSelection.toUpperCase() == "PAPER" && computerSelection == "ROCK") {
-                return "You win! Paper beats Rock!";
-            } else
-            if (playerSelection.toUpperCase() == "SCISSORS" && computerSelection == "PAPER") {
-                return "You win! Scissors beats Paper!";
-            } else
-            if (playerSelection.toUpperCase() == "ROCK" && computerSelection == "PAPER") {
-                return "You lose! Paper beats Rock!";
-            } else
-            if (playerSelection.toUpperCase() == "PAPER" && computerSelection == "SCISSORS") {
-                return "You lose! Scissors beats Paper!";
-            } else
-            if (playerSelection.toUpperCase() == "SCISSORS" && computerSelection == "ROCK") {
-                return "You lose! Rock beats Scissors!";
-            } else {
-                return "It's a tie!";
-            } 
-        }
-        console.log(playRound(playerSelection, computerSelection));
-        
-
-
-    </script>
+   </div>
 </body>
 </html>
