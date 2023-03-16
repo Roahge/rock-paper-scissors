@@ -85,8 +85,8 @@ const checkWinner = (playerScore, computerScore) => {
 }
 
 const updateScore = (playerScore, computerScore) => {
-    playerScoreSpan.innerText = `Player Score: ${playerScore}                    `;
-    computerScoreSpan.innerText = `Computer Score: ${computerScore}                    `;
+    playerScoreSpan.innerText = `Player Score: ${playerScore}`;
+    computerScoreSpan.innerText = `Computer Score: ${computerScore}`;
 }
 
 rockButton.addEventListener('click', () => {
